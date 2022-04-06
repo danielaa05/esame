@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
@@ -55,7 +56,6 @@ import java.util.List;
         repository.deleteById(id);
     }
 
-/*
     @GetMapping("/prodotto/ricercatradate")
     public List<Prodotto> RicercaProdottoTraDate(
             @RequestParam(name = "datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
@@ -65,5 +65,21 @@ import java.util.List;
     ){
         return repository.findByDatadiscadenzaBetween(datada, dataa);
     }
-*/
+    @GetMapping("/prodotto/datadiacquisto")
+    public List<Prodotto> RicercaProdottoConDataDiAcquisto(
+            @RequestParam(name = "datada") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date datada,
+            @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
+                    Date dataa
+    ){
+        return repository.findByDatadiacqistoBetween(datada, dataa);
+    }
+    @PostMapping("/caricafile")
+    public String caricaFile (@RequestParam("file") MultipartFile file){
+        String infoFile = file.getOriginalFilename() + " - " + file.getContentType();
+        String conFormat = String.format("%s-%s", file.getOriginalFilename(), file.getContentType());
+        logger.info(infoFile);
+        logger.warn(conFormat);
+        return conFormat;
+    }
 }
