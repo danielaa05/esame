@@ -16,6 +16,8 @@ public class Prodotto {
     private float prezzo;
     private float quantita;
 
+    public Prodotto(){}
+
     public Prodotto(String nome, Date datadiscadenza, Date datadiacquisto, float prezzo, float quantita) {
         this.nome = nome;
         this.datadiscadenza = datadiscadenza;

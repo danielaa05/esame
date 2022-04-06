@@ -29,14 +29,14 @@ public class PrimoInserimento {
 
             scadenza = dataScadenza.parse("12-06-2022");
             acquisto = dataAcquisto.parse("21-04-2022");
-            Prodotto p2 = new Prodotto("pasta", scadenza, acquisto, 12f, 3f);
+            Prodotto p2 = new Prodotto("pasta", scadenza, acquisto, 2f, 5f);
             logger.info("nome: "+p2.getNome()+" data di scadenza: "+p2.getDatadiscadenza()+"data di acquisto: "
                     +p2.getDatadiacquisto()+"quantita: "+p2.getQuantita()+"prezzo: "+p2.getPrezzo());
             repository.save(p2);
 
             scadenza = dataScadenza.parse("30-04-2022");
             acquisto = dataAcquisto.parse("21-04-2022");
-            Prodotto p3 = new Prodotto("pane", scadenza, acquisto, 12f, 3f);
+            Prodotto p3 = new Prodotto("pane", scadenza, acquisto, 1f, 3f);
             logger.info("nome: "+p3.getNome()+" data di scadenza: "+p3.getDatadiscadenza()+"data di acquisto: "
                     +p3.getDatadiacquisto()+"quantita: "+p3.getQuantita()+"prezzo: "+p3.getPrezzo());
             repository.save(p3);

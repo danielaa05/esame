@@ -11,7 +11,7 @@ public class ProdottoNonTrovatoRisposta {
     @ResponseBody
     @ExceptionHandler(ProdottoNonTrovato.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String utenteNonTrovato(ProdottoNonTrovato ex){
+    public String prodottoNonTrovato(ProdottoNonTrovato ex){
         return "Eccezione: "+ex.getMessage();
     }
 
