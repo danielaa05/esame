@@ -72,7 +72,7 @@ import java.util.List;
             @RequestParam(name = "dataa") @DateTimeFormat(pattern = "dd-MM-yyyy")
                     Date dataa
     ){
-        return repository.findByDatadiacqistoBetween(datada, dataa);
+        return repository.findByDatadiacquistoBetween(datada, dataa);
     }
     @PostMapping("/caricafile")
     public String caricaFile (@RequestParam("file") MultipartFile file){
