@@ -12,7 +12,7 @@ https://github.com/danielaa05/esame.git
 ### Esempi di query con postman
 
 | titolo                                | link postman                                                                     | metodi usati |
-|---------------------------------------|----------------------------------------------------------------------------------|-- -----------|
+|---------------------------------------|----------------------------------------------------------------------------------|--------------|
 | mostra tutti i prodotti               | http://localhost:8080/prodotto                                                   | GET          |
 | trova un prodotto                     | http://localhost:8080/prodotto/3                                                 | GET          |
 | aggiorna prodotto                     | http://localhost:8080/prodotto/2                                                 | PUT          |
@@ -22,4 +22,12 @@ https://github.com/danielaa05/esame.git
 | trova prodotto dalla data di acquisto | http://localhost:8080/prodotto/datadiacquisto?datada=20-04-2022&dataa=22-04-2022 | GET          |
 | carica file                           | http://localhost:8080/caricafile                                                 | POST         |
 
-![figure](esame2/esame/esame/img/mostraTutti.png "block diagram for NIDS")
+![figure](esame/img/mostraTutti.PNG "Esempio di visualizzazione di tutti i prodotti")
+![figure](esame/img/mostraProdotto.PNG "Esempio di visualizzazione di un prodotto")
+![figure](esame/img/aggiornoNome.PNG "Esempio di aggiornamento di un prodotto")
+![figure](esame/img/aggiungiProdotto.PNG "Esempio di aggiunta di un prodotto")
+![figure](esame/img/delete.PNG "Esempio di cancellazione di un prodotto")
+![figure](esame/img/delete2.PNG "Visualizzazione della lista di prodotti escluso quello eliminato")
+![figure](esame/img/dataDiScadenza.PNG "Visualizzazione della lista di prodotti dalla data di scadenza")
+![figure](esame/img/dataDiAcquisto.PNG "Visualizzazione della lista di prodotti dalla data di acquisto")
+![figure](esame/img/caricaFile.PNG "Esempio di upload di un file csv")
